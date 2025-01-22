@@ -4,7 +4,7 @@ function setupMenu(block) {
   // ==========================
   const menuToggleBtn = block.querySelector(".menu-toggle-btn");
   const toggleBackBtn = block.querySelector(".toggle-back-btn");
-  console.log("menuToggleBtn", menuToggleBtn);
+
   const navbarNav = block.querySelector(".navbar-nav-block");
   const menutogleicon = block.querySelector(".menu_iconin");
   const sitelogo = block.querySelector(".site_logo");
@@ -180,8 +180,6 @@ function setupMenu(block) {
         bc_erp.classList.add("bc-erp-exp");
       }
     });
-  } else {
-    console.error("Required elements not found!");
   }
 
   // Submenu 1st
@@ -199,8 +197,6 @@ function setupMenu(block) {
         navlink_iconrexp.classList.add("rotate");
       }
     });
-  } else {
-    console.error("Required elements not found!");
   }
 
   // Submenu 2nd
@@ -218,8 +214,6 @@ function setupMenu(block) {
         navlink_iconrexp2.classList.add("rotate");
       }
     });
-  } else {
-    console.error("Required elements not found!");
   }
 
   // Submenu 3rd
@@ -237,8 +231,6 @@ function setupMenu(block) {
         navlink_iconrexp3.classList.add("rotate");
       }
     });
-  } else {
-    console.error("Required elements not found!");
   }
 
   // Submenu 4rd
@@ -256,8 +248,6 @@ function setupMenu(block) {
         navlink_iconrexp4.classList.add("rotate");
       }
     });
-  } else {
-    console.error("Required elements not found!");
   }
 
   // STEP 3
@@ -350,7 +340,7 @@ fetch("../assets/commonComponent/footer/footer.html")
   .catch((error) => console.error("Error loading the footer:", error));
 
 // Load the faq dynamically
-fetch("../assets/commonComponent/faq/faq.html")
+fetch("../assets/commonComponent/Faq/faq.html")
   .then((response) => response.text())
   .then((data) => {
     const getFaq = document.getElementById("faq");
