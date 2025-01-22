@@ -93,12 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const megaMenu = document.getElementById("megaMenu");
-  megaMenu.addEventListener("click", function (e) {
-    e.stopPropagation(); // Prevents closing the menu on inner clicks
-  });
-});
+
 
 // Tabs
 document.addEventListener("DOMContentLoaded", function () {
