@@ -1,0 +1,63 @@
+/* Custom styles for the menu */
+.menu-card {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    position: absolute;
+    min-height: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+.menu-card.active {
+    display: block;
+}
+
+.mobile_navbar {
+    z-index: 10000;
+}
+
+.menu-card {
+    z-index: 1000000;
+}
+.stat-img{
+    max-width: 100%;
+}
+@media(max-width : 767px) {
+    .hide_for_lg.text-center.mt-3 {
+        display: none;
+    }
+
+    .rp_content_area {
+        margin-top: 20px;
+    }
+
+    .reviews_heading {
+        text-align: center;
+    }
+
+    .rp_content_area p {
+        text-align: left;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .stats_list {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .why-choose_area .navbar-nav .nav-item {
+        margin-bottom: 16px;
+    }
+
+    .why_choose_second_heading {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .action_choose {
+        max-width: 100%;
+    }
+}

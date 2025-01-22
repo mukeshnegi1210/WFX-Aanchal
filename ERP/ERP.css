@@ -1,0 +1,164 @@
+	/* Custom styles for the menu */
+	.menu-card {
+		display: none;
+		padding: 15px;
+		border: 1px solid #ddd;
+
+		background-color: #f9f9f9;
+		position: absolute;
+		min-height: 100%;
+		height: auto;
+		z-index: 3;
+	}
+
+	.menu-card.active {
+		display: block;
+	}
+
+	.mobile_navbar {
+		z-index: 10000;
+	}
+
+	.menu-card {
+		z-index: 1000000;
+	}
+
+	.rp_content_area {
+		margin-right: 0;
+	}
+
+	.blobal-second-btn,
+	.global-btn,
+	.action_choose {
+		max-width: 216px;
+		width: 100% !important;
+		height: 52px;
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	.global-btn {
+		margin: 0 !important;
+	}
+
+	.gradient-text-button {
+		margin-left: 0 !important;
+	}
+
+	.plm-buttons {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.are_strugling_area {
+		margin-top: 0;
+	}
+
+	.stat-img {
+		padding: 0;
+	}
+
+	.why-choose_area-plm .container .custom-d-flex {
+		display: flex;
+		gap: 120px 40px;
+		flex-direction: column;
+	}
+
+	.why-choose_area-plm .container {
+		display: flex;
+		gap: 120px 40px;
+		flex-direction: column;
+	}
+
+	.free_whitepapers_area {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	.faq_area {
+		padding: 80px 0;
+	}
+
+
+	.erp-section {
+		background-color: #F8F9FB;
+
+	}
+
+	.erp-section .rp_content_area {
+		padding: 0;
+	}
+
+	.erp-section .why-us-heading-resp {
+		padding: 0;
+	}
+
+	.why-choose_area-plm-erp .rp_content_area {
+		padding-right: 0;
+	}
+
+	.why-choose_area-plm-erp p {
+		font-size: 18px;
+		color: #333333;
+	}
+
+	.free_whitepapers_area-erp .left_frp {
+		padding: 40px;
+
+	}
+
+	.free_whitepapers_area-erp .why-us-heading-resp {
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
+
+	.free_whitepapers_area-erp .signup-form-btn {
+		margin: 0 auto 10px !important;
+	}
+
+	@media(max-width : 991px) {
+		.plm-text-content{
+			padding-right: 0 !important;
+			text-align: center;
+		}
+		.plm-buttons{
+			justify-content: center;
+		}
+		.plm-buttons a{
+			flex-grow: 1;
+			margin: 0 ;
+		}
+	}
+
+	@media(max-width : 767px) {
+
+		.why-choose_area-plm .container .custom-d-flex,
+		.why-choose_area-plm .container {
+			gap: 0px;
+		}
+
+		.free_whitepapers_area .frew_content_area {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.why-choose_area-plm-erp p {
+			font-size: 16px;
+			text-align: left !important;
+		}
+
+		.free_whitepapers_area-erp .left_frp {
+			padding: 20px;
+		}
+
+		.plm-text-content {
+			padding-right: 0 !important;
+		}
+	}

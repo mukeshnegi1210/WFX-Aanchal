@@ -1,0 +1,186 @@
+/* Custom styles for the menu */
+.menu-card {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+
+    background-color: #f9f9f9;
+    position: absolute;
+    min-height: 100%;
+    height: auto;
+    z-index: 3;
+}
+
+.menu-card.active {
+    display: block;
+}
+
+.plm-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.global-btn,
+.blobal-second-btn,
+.action_choose {
+    max-width: 216px;
+    width: 100% !important;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.action_choose {
+    margin: 0 auto;
+}
+
+.stat-img {
+    padding: 0;
+}
+
+.rp_content_area {
+    margin-right: 10px;
+    padding: 0;
+}
+
+.stats_list img {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.stats_list {
+    gap: 10px;
+}
+
+.are_strugling_area {
+    margin-top: 0;
+}
+
+.why_choose_heading {
+    margin-bottom: 40px;
+}
+
+.help-section .row.g-4 {
+    display: flex;
+    gap: 80px;
+    justify-content: space-between;
+}
+
+.card-custom {
+    max-width: calc(100%/2 - 40px);
+    width: 100%;
+}
+
+.tools-card {
+    max-width: calc(100%/4 - 15px);
+}
+
+.free_whitepapers_area {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.faq_area .accordion {
+    margin-left: 20px;
+}
+
+.free_whitepapers_area-plm .left_frp {
+    padding: 40px;
+
+}
+
+.free_whitepapers_area-plm .why_choose_heading {
+    margin-bottom: 0px;
+}
+
+.free_whitepapers_area-plm .bg-form-plm {
+    padding: 20px;
+}
+
+.free_whitepapers_area-plm .signup-form-btn {
+    margin: 0 auto 10px !important;
+}
+
+.reviews_arear {
+    background-color: transparent;
+}
+
+.tools-subtitle {
+    max-width: 450px;
+    margin: auto;
+}
+
+.tools-mbl-section .side-bgs {
+    position: absolute;
+    background: linear-gradient(to right, #F5F5F5 0%, #f5f5f53d 100%);
+    height: 200px;
+    width: 70px;
+    transform: rotateY(180deg) translateY(73%);
+    z-index: 1;
+    left: 0px;min-height: 240px;
+}
+
+
+.tools-mbl-section .side-bgs.right-side-bg {
+    right: 0px;
+    left: auto;
+}
+
+@media(max-width : 992px) {
+    .plm-text-content {
+        padding-right: 0 !important;
+        text-align: center;
+    }
+
+    .plm-buttons {
+        justify-content: center;
+    }
+}
+
+@media(max-width : 767px) {
+
+    .card-custom {
+        max-width: 100%;
+    }
+
+    .are_strugling_area {
+        margin-top: 0;
+    }
+
+    .help-section .row.g-4 {
+        gap: 40px;
+    }
+
+    .free_whitepapers_area-plm .frew_content_area {
+        border-left: 0 !important;
+        border-top: 5px solid #EFA64A !important;
+        text-align: center;
+    }
+
+    .free_whitepapers_area-plm .why_choose_heading {
+        margin-bottom: 10px;
+    }
+
+    .free_whitepapers_area-plm .left_frp {
+        padding: 20px;
+    }
+
+    .signup-form .signup-limited-slots {
+        margin-top: 010px;
+    }
+
+
+
+    .plm-buttons {
+        gap: 10px;
+    }
+
+    .plm-buttons a {
+        flex-grow: 1;
+    }
+}
