@@ -3437,11 +3437,11 @@ ul.erp_drop li:first-child {
     }
 
     .header_form_area {
-        position: relative;
-        margin-left: -20px;
-        margin-right: -20px;
-        padding: 0 20px;
-        margin-top: -10px;
+        position: static;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 0 15px;
+        /* margin-top: -10px; */
         background: url('../img/header_bg.svg');
         background-repeat: no-repeat;
         z-index: 99 !important;
