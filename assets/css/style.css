@@ -3310,6 +3310,8 @@ ul.erp_drop li:first-child {
         line-height: 19px !important;
     }
 
+    
+
     .stats_list {
         font-size: 16px;
     }
@@ -3645,7 +3647,9 @@ ul.erp_drop li:first-child {
 .blog-content {
     color: #323232;
 }
-
+.home-badges .badge {
+    color: #242733;
+}
 @media only screen and (max-width: 400px) {
     .stats-img img {
         max-width: 90px !important;
