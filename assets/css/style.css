@@ -3419,7 +3419,7 @@ ul.erp_drop li:first-child {
         margin-top: -10px;
         background: url('../img/header_bg.svg');
         background-repeat: no-repeat;
-        z-index: 1000 !important;
+        z-index: 99 !important;
         background-size: 100%;
         background-position: center;
     }
