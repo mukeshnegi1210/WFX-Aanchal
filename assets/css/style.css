@@ -504,8 +504,13 @@ ul.erp_drop li:first-child {
     padding: 40px;
     background-color: #F5F5F5;
     border-radius: 3px;
-    max-height: 110px;
     margin-bottom: 5px;
+    width: 100%;
+    min-height: 130px;
+}
+
+.nav-2nd-box img {
+    max-height: 50px;
 }
 
 .nav-2nd-box+p {
@@ -514,6 +519,7 @@ ul.erp_drop li:first-child {
     text-align: left;
     padding-inline: 8px;
     padding-top: 5px;
+    margin-bottom: 0;
 }
 
 .p-2nd-box {
@@ -592,17 +598,19 @@ ul.erp_drop li:first-child {
 /*Customer Stories*/
 .forbrand_2 {
 
-    height: 165px;
+    /* height: 165px; */
     max-width: 100%;
     text-align: center;
     display: flex;
     align-items: start;
     justify-content: start;
 }
-.forbrand_2 img{
+
+.forbrand_2 img {
     max-width: 100%;
     width: 100%;
 }
+
 .dropdown_3_nav {
     width: 280px;
     left: 0px;
