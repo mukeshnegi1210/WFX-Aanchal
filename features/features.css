@@ -12,23 +12,24 @@
 
 .slider {
     display: flex;
-
+    align-items: stretch;
     transition: transform 0.5s ease-in-out;
 }
 
 .slider-feature .card {
-    flex: 0 0 calc((100% - 80px) / 4);
-    /* 4 cards visible at a time */
-    margin-inline: 10px;
+    flex: 0 0 25%;
     box-sizing: border-box;
-
-
+    margin: 0;
     justify-content: center;
     align-items: center;
+    padding: 0 5px;
+    border: 0;
+    background-color: transparent;
 }
 
-.card-content {
 
+.card-content {
+    border: 1px solid #cccccc;
     border-radius: 5px;
     padding: 20px;
     text-align: left;
@@ -36,6 +37,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    height: 100%;
+    background-color: #ffffff;
+
 }
 
 .card-content .tag {
@@ -191,7 +195,7 @@ a.btn-link:hover {
 
 @media(max-width : 1200px) {
     .slider-feature .card {
-        flex: 0 0 calc((100% - 40px) / 3);
+        flex: 0 0 calc((100%) / 3);
     }
 
     .feature-banner .plm-text-content {
@@ -210,7 +214,7 @@ a.btn-link:hover {
     }
 
     .slider-feature .card {
-        flex: 0 0 calc((100% - 40px) / 2);
+        flex: 0 0 calc((100%) / 2);
     }
 
     .feature-main-heading {
@@ -262,7 +266,8 @@ a.btn-link:hover {
     }
 
     .slider-feature .card {
-        flex: 0 0 100%;
+        flex: 0 0 calc(100%);
+        padding: 0 10px;
     }
 
     .fpb_form>.row .col-12.sm_cols input {

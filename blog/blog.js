@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function loadMoreBlogs() {
-  alert("Load more blogs functionality is not implemented yet!");
-}
+
 
 
 document.addEventListener("DOMContentLoaded", () => {

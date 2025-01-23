@@ -17,21 +17,21 @@ const updateVisibleCards = () => {
   }
   cardWidth = slider.children[0].offsetWidth; // Recalculate card width
   currentIndex = Math.min(currentIndex, totalCards - visibleCards); // Adjust currentIndex
-  slider.style.transform = `translateX(-${(currentIndex * cardWidth)+5}px)`; // Adjust slider position
+  slider.style.transform = `translateX(-${(currentIndex * cardWidth)}px)`; // Adjust slider position
 };
 
 // Event listeners for arrows
 prevArrow.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
-    slider.style.transform = `translateX(-${(currentIndex * cardWidth)+15}px)`;
+    slider.style.transform = `translateX(-${(currentIndex * cardWidth)+5}px)`;
   }
 });
 
 nextArrow.addEventListener("click", () => {
   if (currentIndex < totalCards - visibleCards) {
     currentIndex++;
-    slider.style.transform = `translateX(-${(currentIndex * cardWidth)+15}px)`;
+    slider.style.transform = `translateX(-${(currentIndex * cardWidth)+5}px)`;
   }
 });
 
