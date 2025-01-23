@@ -15,13 +15,6 @@
 		display: block;
 	}
 
-	.mobile_navbar {
-		z-index: 10000;
-	}
-
-	.menu-card {
-		z-index: 1000000;
-	}
 
 	.rp_content_area {
 		margin-right: 0;
@@ -124,16 +117,18 @@
 	}
 
 	@media(max-width : 991px) {
-		.plm-text-content{
+		.plm-text-content {
 			padding-right: 0 !important;
 			text-align: center;
 		}
-		.plm-buttons{
+
+		.plm-buttons {
 			justify-content: center;
 		}
-		.plm-buttons a{
+
+		.plm-buttons a {
 			flex-grow: 1;
-			margin: 0 ;
+			margin: 0;
 		}
 	}
 

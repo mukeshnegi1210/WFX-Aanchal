@@ -267,7 +267,7 @@ a.btn-link:hover {
 
     .slider-feature .card {
         flex: 0 0 calc(100%);
-        padding: 0 10px;
+        padding: 5px 10px;
     }
 
     .fpb_form>.row .col-12.sm_cols input {
@@ -353,13 +353,6 @@ a.btn-link:hover {
     display: block;
 }
 
-.mobile_navbar {
-    z-index: 10000;
-}
-
-.menu-card {
-    z-index: 1000000;
-}
 
 .navbar-toggler {
     padding: 0;

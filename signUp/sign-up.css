@@ -14,16 +14,10 @@
     display: block;
 }
 
-.mobile_navbar {
-    z-index: 10000;
-}
-
-.menu-card {
-    z-index: 1000000;
-}
-.stat-img{
+.stat-img {
     max-width: 100%;
 }
+
 @media(max-width : 767px) {
     .hide_for_lg.text-center.mt-3 {
         display: none;
