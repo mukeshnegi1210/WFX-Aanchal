@@ -107,6 +107,9 @@ function setupMenu(block) {
   // STEP 2
   forBrandsBtn.addEventListener("click", function () {
     // Toggle visibility of the products submenu
+    submenumanufac.style.display = "none"; // Close submenu
+    mficon.src = "../assets/img/menu_down_btn.svg";
+    pformanufacture.style.backgroundColor = "#F5F5F5";
     if (Brandsbmenu.style.display === "block") {
       Brandsbmenu.style.display = "none"; // Close submenu
       bicon.src = "../assets/img/menu_down_btn.svg";
@@ -120,8 +123,12 @@ function setupMenu(block) {
   });
   pmanufacBtn.addEventListener("click", function () {
     // Toggle visibility of the products submenu
+
+    Brandsbmenu.style.display = "none"; // Close submenu
+    bicon.src = "../assets/img/menu_down_btn.svg";
     if (submenumanufac.style.display === "block") {
       submenumanufac.style.display = "none"; // Close submenu
+
       mficon.src = "../assets/img/menu_down_btn.svg";
       pformanufacture.style.backgroundColor = "#F5F5F5";
     } else {
@@ -132,7 +139,11 @@ function setupMenu(block) {
   });
   // 2
   csbtnofbrands.addEventListener("click", function () {
+    cssubmenumanufac.style.display = "none"; // Close submenu
+    csmficon.src = "../assets/img/menu_down_btn.svg";
+    csformanufacture.style.backgroundColor = "#F5F5F5";
     // Toggle visibility of the products submenu
+
     if (csBrandsbmenu.style.display === "block") {
       csBrandsbmenu.style.display = "none"; // Close submenu
       csbicon.src = "../assets/img/menu_down_btn.svg";
@@ -146,6 +157,9 @@ function setupMenu(block) {
   });
   // 3
   cspmanufacBtn.addEventListener("click", function () {
+    csBrandsbmenu.style.display = "none"; // Close submenu
+    csbicon.src = "../assets/img/menu_down_btn.svg";
+    csforbrands.style.backgroundColor = "#F5F5F5";
     // Toggle visibility of the products submenu
     if (cssubmenumanufac.style.display === "block") {
       cssubmenumanufac.style.display = "none"; // Close submenu
