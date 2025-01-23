@@ -200,9 +200,27 @@ function setupMenu(block) {
   const second_exp_btn = document.querySelector(".second-exp-btn");
   const secondsubmenuexp = document.querySelector(".secondsubmenuexp");
   const navlink_iconrexp = document.querySelector(".navlink_iconrexp");
+  // Submenu 2nd
+  const second_exp_btn2 = document.querySelector(".second-exp-btn2");
+  const secondsubmenuexp2 = document.querySelector(".secondsubmenuexp2");
+  const navlink_iconrexp2 = document.querySelector(".navlink_iconrexp2");
+  // Submenu 3rd
+  const second_exp_btn3 = document.querySelector(".second-exp-btn3");
+  const secondsubmenuexp3 = document.querySelector(".secondsubmenuexp3");
+  const navlink_iconrexp3 = document.querySelector(".navlink_iconrexp3");
+  // Submenu 4rd
+  const second_exp_btn4 = document.querySelector(".second-exp-btn4");
+  const secondsubmenuexp4 = document.querySelector(".secondsubmenuexp4");
+  const navlink_iconrexp4 = document.querySelector(".navlink_iconrexp4");
 
   if (second_exp_btn && secondsubmenuexp) {
     second_exp_btn.addEventListener("click", function () {
+      secondsubmenuexp2.style.display = "none";
+      navlink_iconrexp2.classList.remove("rotate");
+      secondsubmenuexp3.style.display = "none";
+      navlink_iconrexp3.classList.remove("rotate");
+      secondsubmenuexp4.style.display = "none";
+      navlink_iconrexp4.classList.remove("rotate");
       if (secondsubmenuexp.style.display === "block") {
         secondsubmenuexp.style.display = "none";
         navlink_iconrexp.classList.remove("rotate");
@@ -213,13 +231,15 @@ function setupMenu(block) {
     });
   }
 
-  // Submenu 2nd
-  const second_exp_btn2 = document.querySelector(".second-exp-btn2");
-  const secondsubmenuexp2 = document.querySelector(".secondsubmenuexp2");
-  const navlink_iconrexp2 = document.querySelector(".navlink_iconrexp2");
-
   if (second_exp_btn2 && secondsubmenuexp2) {
     second_exp_btn2.addEventListener("click", function () {
+      secondsubmenuexp.style.display = "none";
+      navlink_iconrexp.classList.remove("rotate");
+
+      secondsubmenuexp3.style.display = "none";
+      navlink_iconrexp3.classList.remove("rotate");
+      secondsubmenuexp4.style.display = "none";
+      navlink_iconrexp4.classList.remove("rotate");
       if (secondsubmenuexp2.style.display === "block") {
         secondsubmenuexp2.style.display = "none";
         navlink_iconrexp2.classList.remove("rotate");
@@ -230,13 +250,15 @@ function setupMenu(block) {
     });
   }
 
-  // Submenu 3rd
-  const second_exp_btn3 = document.querySelector(".second-exp-btn3");
-  const secondsubmenuexp3 = document.querySelector(".secondsubmenuexp3");
-  const navlink_iconrexp3 = document.querySelector(".navlink_iconrexp3");
-
   if (second_exp_btn3 && secondsubmenuexp3) {
     second_exp_btn3.addEventListener("click", function () {
+      secondsubmenuexp.style.display = "none";
+      navlink_iconrexp.classList.remove("rotate");
+      secondsubmenuexp2.style.display = "none";
+      navlink_iconrexp2.classList.remove("rotate");
+      secondsubmenuexp4.style.display = "none";
+      navlink_iconrexp4.classList.remove("rotate");
+
       if (secondsubmenuexp3.style.display === "block") {
         secondsubmenuexp3.style.display = "none";
         navlink_iconrexp3.classList.remove("rotate");
@@ -247,13 +269,15 @@ function setupMenu(block) {
     });
   }
 
-  // Submenu 4rd
-  const second_exp_btn4 = document.querySelector(".second-exp-btn4");
-  const secondsubmenuexp4 = document.querySelector(".secondsubmenuexp4");
-  const navlink_iconrexp4 = document.querySelector(".navlink_iconrexp4");
-
   if (second_exp_btn4 && secondsubmenuexp4) {
     second_exp_btn4.addEventListener("click", function () {
+      secondsubmenuexp.style.display = "none";
+      navlink_iconrexp.classList.remove("rotate");
+      secondsubmenuexp2.style.display = "none";
+      navlink_iconrexp2.classList.remove("rotate");
+      secondsubmenuexp3.style.display = "none";
+      navlink_iconrexp3.classList.remove("rotate");
+
       if (secondsubmenuexp4.style.display === "block") {
         secondsubmenuexp4.style.display = "none";
         navlink_iconrexp4.classList.remove("rotate");
