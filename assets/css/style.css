@@ -599,7 +599,10 @@ ul.erp_drop li:first-child {
     align-items: start;
     justify-content: start;
 }
-
+.forbrand_2 img{
+    max-width: 100%;
+    width: 100%;
+}
 .dropdown_3_nav {
     width: 280px;
     left: 0px;
