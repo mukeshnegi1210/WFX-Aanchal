@@ -15,7 +15,7 @@
 	background-position: right top;
 	background-repeat: no-repeat;
 	background-size: 650px;
-	padding-top: 40px !important	;
+	padding-top: 40px !important;
 
 }
 
@@ -32,12 +32,13 @@
 	padding-top: 40px !important;
 }
 
-.plm-section .container .row.align-items-center.flex-md-row{
+.plm-section .container .row.align-items-center.flex-md-row {
 	justify-content: space-between;
 	margin-bottom: 33px !important;
 }
+
 .plm-text-content {
-	
+
 	padding-right: 60px !important;
 }
 
@@ -59,7 +60,7 @@
 
 .plm-description {
 	font-size: 20px;
-	color:#333333;
+	color: #333333;
 	margin-top: 20px;
 	margin-bottom: 20px
 }
@@ -130,7 +131,7 @@
 .help-card-second-title {
 	font-size: 47px;
 	line-height: 1.2;
-	
+
 	width: 100%;
 	text-align: left;
 	font-family: "brandon", sans-serif;
@@ -199,19 +200,20 @@
 	padding-bottom: 80px;
 }
 
-.tools-section .reviews_heading{
+.tools-section .reviews_heading {
 	margin-bottom: 20px;
 }
 
-.tools-section .row.g-4{
+.tools-section .row.g-4 {
 	display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 20px;
-		flex-wrap: wrap;
-		max-width: 1050px;
-		margin: 0 auto !important;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	max-width: 1050px;
+	margin: 0 auto !important;
 }
+
 .tools-title {
 	font-size: 28px;
 	font-weight: bold;
@@ -314,13 +316,28 @@
 
 .why-us-heading-resp {
 	padding: 20px 0px;
-	line-height: 60px;
+	line-height: 1.3;
 	font-weight: bolder;
 }
 
 .head-feature-whitepaper {
 	font-size: 40px;
 	font-weight: bolder;
+}
+
+@media (max-width: 1300px) {
+
+	.help-card-second-title,
+	.head-feature-whitepaper {
+		font-size: 35px;
+		line-height: 1.3;
+	}
+
+	.help-card-text {
+		font-size: 16px;
+	}
+
+	
 }
 
 @media (max-width: 767px) {
@@ -348,7 +365,7 @@
 
 	.plm-section {
 		text-align: center;
-		padding-top: 0 !important	;
+		padding-top: 0 !important;
 	}
 
 	.plm-buttons {
@@ -365,9 +382,10 @@
 		padding-inline-start: 0px;
 		text-align: center !important;
 	}
-	.erp_drop{
+
+	.erp_drop {
 		padding-top: 10px;
-		
+
 	}
 
 	.plm-hero-pad {
@@ -383,7 +401,7 @@
 	}
 
 	.frew_content_area {
-		border-top:0 !important;
+		border-top: 0 !important;
 		border-left: 5px solid #EFA64A !important;
 		text-align: center;
 	}
@@ -403,64 +421,81 @@
 		text-align: center !important;
 		background-color: #F8F9FB;
 	}
-	.global-btn, .blobal-second-btn, .action_choose{
+
+	.global-btn,
+	.blobal-second-btn,
+	.action_choose {
 		font-size: 16px;
 		line-height: 22px;
 		padding: 0;
-        display: flex;
+		display: flex;
 		margin-left: 0 !important;
 	}
-	.plm-buttons{
+
+	.plm-buttons {
 		gap: 8px;
 	}
-	.action_choose{
+
+	.action_choose {
 		justify-content: center;
 		align-items: center;
 		max-width: 100% !important;
 		width: 100% !important;
 	}
-	.why_choose_section .action_choose, .customerReview .action_choose{
+
+	.why_choose_section .action_choose,
+	.customerReview .action_choose {
 		margin: 0 auto !important;
 		max-width: 100%;
 	}
-	.plm-section .container .row.align-items-center.flex-md-row{
+
+	.plm-section .container .row.align-items-center.flex-md-row {
 		margin-bottom: 0 !important;
 	}
-	.help-card-second-title{
-        font-size: 32px;
-        line-height: 42px;
-        margin-bottom: 16px;
-        margin-top: 16px;
-    }
-	.help-card-text{
+
+	.help-card-second-title {
+		font-size: 32px;
+		line-height: 42px;
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+
+	.help-card-text {
 		font-size: 16px;
 		line-height: 24px;
 		margin-bottom: 0;
 	}
-	.help-section .row.g-4{
+
+	.help-section .row.g-4 {
 		gap: 50px;
 	}
-	.ser-section{
+
+	.ser-section {
 		padding-top: 40PX;
 		padding-bottom: 40px;
 	}
-	.why_choose_heading{
+
+	.why_choose_heading {
 		font-size: 32px;
 		line-height: 38px;
 		padding: 0;
 		margin-bottom: 20px;
 	}
-	.reviews_arear .reviews_heading{
+
+	.reviews_arear .reviews_heading {
 		margin-bottom: 20px !important;
 	}
-	.reviews_arear .row.py-5{
+
+	.reviews_arear .row.py-5 {
 		padding-top: 40px !important;
 		padding-bottom: 0 !important;
 	}
-	.tools-subtitle{
+
+	.tools-subtitle {
 		margin-bottom: 20px !important;
 	}
-	.free_whitepapers_area .bg-form-plm .signup-form-btn{
-		margin:  0 auto !important;
+
+	.free_whitepapers_area .bg-form-plm .signup-form-btn {
+		margin: 0 auto !important;
 	}
 }

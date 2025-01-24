@@ -1,5 +1,5 @@
 // <!-- Mobile menu JS -->
-// opnining
+// opening
 function setupMenu(block) {
   // ==========================
   const menuToggleBtn = block.querySelector(".menu-toggle-btn");
