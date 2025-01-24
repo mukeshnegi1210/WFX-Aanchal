@@ -148,7 +148,7 @@
 
 }
 
-@media(max-width : 992px) {
+@media(max-width : 991px) {
     .plm-text-content {
         padding-right: 0 !important;
         text-align: center;
