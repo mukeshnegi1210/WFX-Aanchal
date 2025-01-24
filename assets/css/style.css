@@ -2787,13 +2787,14 @@ ul.erp_drop li:first-child {
 
 /*Responsiveness*/
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 991px) {
     body {
-        padding-top: 55px;
+        padding-top: 56px;
     }
 
     .navbar {
         padding: 8px 0;
+        min-height: 56px;
     }
 
     .mobile_navbar {
