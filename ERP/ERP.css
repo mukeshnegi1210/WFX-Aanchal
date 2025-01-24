@@ -115,7 +115,12 @@
 	.free_whitepapers_area-erp .signup-form-btn {
 		margin: 0 auto 10px !important;
 	}
+	@media(max-width : 1300px) {
 
+		.plm-main-heading{
+			font-size: 45px;
+		}
+	}
 	@media(max-width : 991px) {
 		.plm-text-content {
 			padding-right: 0 !important;

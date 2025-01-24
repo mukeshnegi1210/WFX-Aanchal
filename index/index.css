@@ -23,12 +23,9 @@
     margin-top: 20px;
 }
 
-
-
 .faq_area .accordion {
     margin-left: 20px;
 }
-
 
 .reviews_cards {
     margin-right: 20px !important;
@@ -95,9 +92,9 @@
     margin-top: 80px;
 }
 
-@media(max-width : 1200px) {
-    
 
+
+@media (max-width:1200px) {
     .frew_content_area .row {
         justify-content: center;
     }
@@ -105,23 +102,13 @@
     .frew_content_area .col-lg-8.col-md-8.col-12 {
         width: 100% !important;
     }
-}
 
-@media (max-width:1200px) {
     .service_area_two {
         margin-top: 300px;
     }
 
     .whyc_cols {
         max-width: calc(50% - 10px);
-    }
-
-    .transforming_area>.container>.row>.col-12+.col-12 {
-        margin: 30px 0 !important;
-    }
-
-    .transforming_area>.container>.row>.col-12>.image-container~.image-container {
-        margin-top: 30px !important;
     }
 
     .transforming_area>.container>.row>.col-12>.image-container {
@@ -136,11 +123,26 @@
     .image-container img {
         height: auto;
     }
+
+    .transforming_area .image-container img {
+        height: 100%;
+    }
+
+    .transforming_area .image-container.height-300 {
+        margin-left: 20px;
+    }
 }
 
 @media(max-width : 991px) {
     .height-300 {
         height: auto !important;
+    }
+
+    .transforming_area .image-container.height-300 {
+        margin-left: 0px;
+    }
+    .transforming_area .image-container.height-300:first-child{
+        margin-top: 20px;
     }
 }
 
@@ -190,9 +192,11 @@
         height: 52px;
         margin-bottom: 8px;
     }
-
+    .transforming_area .image-container.height-300{
+        margin-top: 20px;
+    }
     .transforming_area>.container>.row>.col-12>.image-container.height-300:last-child {
-        margin-bottom: 20px;
+        margin-bottom: 20px!important;
     }
 
     .header_content_area {
