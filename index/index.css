@@ -55,6 +55,10 @@
     height: 100%;
 }
 
+.transforming_area>.container>.row>.col-12>.image-container.Rainwear-img .overlay {
+    right: 40px;
+}
+
 .transforming_area>.container>.row>.col-12>.image-container.height-300 {
     margin-bottom: 40px;
 }
@@ -141,7 +145,8 @@
     .transforming_area .image-container.height-300 {
         margin-left: 0px;
     }
-    .transforming_area .image-container.height-300:first-child{
+
+    .transforming_area .image-container.height-300:first-child {
         margin-top: 20px;
     }
 }
@@ -192,11 +197,13 @@
         height: 52px;
         margin-bottom: 8px;
     }
-    .transforming_area .image-container.height-300{
+
+    .transforming_area .image-container.height-300 {
         margin-top: 20px;
     }
+
     .transforming_area>.container>.row>.col-12>.image-container.height-300:last-child {
-        margin-bottom: 20px!important;
+        margin-bottom: 20px !important;
     }
 
     .header_content_area {
@@ -258,5 +265,9 @@
     .strgl_pera {
         font-size: 16px;
         margin-bottom: 10px;
+    }
+
+    .transforming_area>.container>.row>.col-12>.image-container.Rainwear-img .overlay {
+        right: 0;
     }
 }
