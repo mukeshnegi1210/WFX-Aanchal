@@ -7,6 +7,18 @@ let cardWidth = slider.children[0].offsetWidth;
 let totalCards = slider.children.length;
 let visibleCards = 4; // Default number of visible cards
 
+// Clone first and last set of cards for seamless looping
+const cloneFirst = [...slider.children].slice(0, visibleCards).map(card => card.cloneNode(true));
+const cloneLast = [...slider.children].slice(-visibleCards).map(card => card.cloneNode(true));
+cloneFirst.forEach(card => slider.appendChild(card)); // Add clones to the end
+cloneLast.reverse().forEach(card => slider.prepend(card)); // Add clones to the start
+
+// Update totalCards to include cloned elements
+totalCards = slider.children.length;
+
+// Adjust the slider position to start at the "first" real card
+slider.style.transform = `translateX(-${visibleCards * cardWidth}px)`;
+
 // Function to update visibleCards based on screen size
 const updateVisibleCards = () => {
   if (window.innerWidth <= 768) {
@@ -16,30 +28,54 @@ const updateVisibleCards = () => {
     visibleCards = 4; // Default for larger screens
   }
   cardWidth = slider.children[0].offsetWidth; // Recalculate card width
-  currentIndex = Math.min(currentIndex, totalCards - visibleCards); // Adjust currentIndex
-  slider.style.transform = `translateX(-${(currentIndex * cardWidth)}px)`; // Adjust slider position
+  currentIndex = Math.min(currentIndex, totalCards - visibleCards * 2); // Adjust currentIndex
+  slider.style.transition = "none"; // Prevent transition during adjustment
+  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`; // Adjust slider position
 };
 
 // Event listeners for arrows
 prevArrow.addEventListener("click", () => {
-  if (currentIndex > 0) {
+  if (currentIndex > -visibleCards) {
     currentIndex--;
-    slider.style.transform = `translateX(-${(currentIndex * cardWidth)+5}px)`;
+  } else {
+    // Seamless looping: Jump to the cloned end before moving backward
+    currentIndex = totalCards - visibleCards * 2 - 1;
+    slider.style.transition = "none";
+    slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+    setTimeout(() => {
+      slider.style.transition = "transform 0.3s ease-in-out";
+      currentIndex--;
+      slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+    }, 50);
+    return;
   }
+  slider.style.transition = "transform 0.3s ease-in-out";
+  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
 });
 
 nextArrow.addEventListener("click", () => {
-  if (currentIndex < totalCards - visibleCards) {
+  if (currentIndex < totalCards - visibleCards * 2) {
     currentIndex++;
-    slider.style.transform = `translateX(-${(currentIndex * cardWidth)+5}px)`;
+  } else {
+    // Seamless looping: Jump to the cloned start before moving forward
+    currentIndex = 0;
+    slider.style.transition = "none";
+    slider.style.transform = `translateX(-${visibleCards * cardWidth}px)`;
+    setTimeout(() => {
+      slider.style.transition = "transform 0.3s ease-in-out";
+      currentIndex++;
+      slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+    }, 50);
+    return;
   }
+  slider.style.transition = "transform 0.3s ease-in-out";
+  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
 });
 
-// Event listener for window resize to adjust visible cards
+// Update visible cards and slider position on window resize
 window.addEventListener("resize", updateVisibleCards);
-
-// Initial setup
 updateVisibleCards();
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // Select all video containers
