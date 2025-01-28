@@ -3113,16 +3113,14 @@ ul.erp_drop li:first-child {
 
 
     .marquee-container-wrapper::before {
-
         content: "";
         left: -15px;
         top: 0;
         position: absolute;
         width: 70px;
         height: 100%;
-        z-index: 6;
- 
-        background: linear-gradient(to right, rgba(230, 240, 234, 0.239) 0%, rgb(230, 240, 234) 100%);
+        z-index: 6; 
+        background: linear-gradient(to right, rgb(230, 240, 234) 0%,  rgba(230, 240, 234, 0.1) 100%);
     }
 
     .marquee-container-wrapper::after {
