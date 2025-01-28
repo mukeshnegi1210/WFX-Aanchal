@@ -2675,6 +2675,50 @@ ul.erp_drop li:first-child {
     padding: 9px 0;
 }
 
+.faq_img {
+    height: calc(100% - 8px);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+
+.marquee {
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-reverse {
+    animation: marquee-rtl 10s linear infinite;
+}
+
+
+
+.marquee img {
+    height: 50px;
+    width: auto;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes marquee-rtl {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
 @media only screen and (max-width: 1400px) {
     .services_cards_child {
         display: flex;
@@ -2815,8 +2859,6 @@ ul.erp_drop li:first-child {
         padding: 10px 20px;
         height: calc(100vh - 56px);
     }
-
-
 
     .navbar-toggler:focus,
     .navbar-toggler:active {
@@ -3065,6 +3107,36 @@ ul.erp_drop li:first-child {
         border-radius: 4px;
     }
 
+    .marquee-container-wrapper {
+        position: relative;
+    }
+
+
+    .marquee-container-wrapper::before {
+
+        content: "";
+        left: -15px;
+        top: 0;
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        z-index: 6;
+ 
+        background: linear-gradient(to right, rgba(230, 240, 234, 0.239) 0%, rgb(230, 240, 234) 100%);
+    }
+
+    .marquee-container-wrapper::after {
+
+        content: "";
+        right: -15px;
+        top: 0;
+        position: absolute;
+        width: 70px;
+        height: 100%;
+        z-index: 6;
+        background: linear-gradient(to right, rgba(247, 238, 222, 0.239) 0%, rgb(247, 238, 222) 100%);
+ 
+    }
 }
 
 @media only screen and (max-width: 767px) {
