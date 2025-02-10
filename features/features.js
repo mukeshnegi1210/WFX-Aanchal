@@ -1,11 +1,13 @@
 const slider = document.getElementById("slider");
 const prevArrow = document.getElementById("prevArrow");
 const nextArrow = document.getElementById("nextArrow");
+const dotsContainer = document.getElementById("dotsContainer");
 
 let currentIndex = 0;
 let cardWidth = slider.children[0].offsetWidth;
 let totalCards = slider.children.length;
 let visibleCards = 4; // Default number of visible cards
+let originalCards = totalCards; // Store the original card count
 
 // Clone first and last set of cards for seamless looping
 const cloneFirst = [...slider.children].slice(0, visibleCards).map(card => card.cloneNode(true));
@@ -22,15 +24,44 @@ slider.style.transform = `translateX(-${visibleCards * cardWidth}px)`;
 // Function to update visibleCards based on screen size
 const updateVisibleCards = () => {
   if (window.innerWidth <= 768) {
-    // Example for mobile breakpoint
-    visibleCards = 1;
+    visibleCards = 1; // Mobile view
   } else {
     visibleCards = 4; // Default for larger screens
   }
   cardWidth = slider.children[0].offsetWidth; // Recalculate card width
-  currentIndex = Math.min(currentIndex, totalCards - visibleCards * 2); // Adjust currentIndex
+  currentIndex = Math.min(currentIndex, totalCards - visibleCards * 2);
   slider.style.transition = "none"; // Prevent transition during adjustment
-  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`; // Adjust slider position
+  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+};
+
+// Create dots
+const createDots = () => {
+  dotsContainer.innerHTML = ""; // Clear previous dots
+  for (let i = 0; i < originalCards; i++) {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active"); // First dot is active
+    dot.dataset.index = i;
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateSlider();
+    });
+    dotsContainer.appendChild(dot);
+  }
+};
+
+// Update active dot
+const updateDots = () => {
+  document.querySelectorAll(".dot").forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentIndex);
+  });
+};
+
+// Function to update slider position and dots
+const updateSlider = () => {
+  slider.style.transition = "transform 0.3s ease-in-out";
+  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+  updateDots();
 };
 
 // Event listeners for arrows
@@ -38,43 +69,42 @@ prevArrow.addEventListener("click", () => {
   if (currentIndex > -visibleCards) {
     currentIndex--;
   } else {
-    // Seamless looping: Jump to the cloned end before moving backward
     currentIndex = totalCards - visibleCards * 2 - 1;
     slider.style.transition = "none";
     slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
     setTimeout(() => {
       slider.style.transition = "transform 0.3s ease-in-out";
       currentIndex--;
-      slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+      updateSlider();
     }, 50);
     return;
   }
-  slider.style.transition = "transform 0.3s ease-in-out";
-  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+  updateSlider();
 });
 
 nextArrow.addEventListener("click", () => {
   if (currentIndex < totalCards - visibleCards * 2) {
     currentIndex++;
   } else {
-    // Seamless looping: Jump to the cloned start before moving forward
     currentIndex = 0;
     slider.style.transition = "none";
     slider.style.transform = `translateX(-${visibleCards * cardWidth}px)`;
     setTimeout(() => {
       slider.style.transition = "transform 0.3s ease-in-out";
       currentIndex++;
-      slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+      updateSlider();
     }, 50);
     return;
   }
-  slider.style.transition = "transform 0.3s ease-in-out";
-  slider.style.transform = `translateX(-${(currentIndex + visibleCards) * cardWidth}px)`;
+  updateSlider();
 });
 
-// Update visible cards and slider position on window resize
+// Update on resize
 window.addEventListener("resize", updateVisibleCards);
+
+// Initialize
 updateVisibleCards();
+createDots();
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -129,7 +159,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 
 // Tabs
 document.addEventListener("DOMContentLoaded", function () {

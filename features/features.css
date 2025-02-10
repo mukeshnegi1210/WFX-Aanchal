@@ -193,15 +193,43 @@ a.btn-link:hover {
     right: 0;
 }
 
+#dotsContainer {
+    margin-top: 20px;
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#dotsContainer .dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #00D1CF 0%, #0099C4 100%);
+    opacity: 0.3;
+}
+
+#dotsContainer .dot+.dot {
+    margin-left: 10px;
+}
+
+#dotsContainer .dot.active {
+    background: linear-gradient(90deg, #00D1CF 0%, #0099C4 100%);
+    opacity: 1;
+}
+
 @media(max-width : 1300px) {
     .feature-main-heading {
         font-size: 45px;
     }
-    .feature-sub-heading{
+
+    .feature-sub-heading {
         font-size: 35px;
         line-height: 1.3;
     }
-    .slider-feature .help-card-second-title{
+
+    .slider-feature .help-card-second-title {
         font-size: 24px;
     }
 }
@@ -257,6 +285,10 @@ a.btn-link:hover {
 
 
 @media (max-width: 767px) {
+    #dotsContainer {
+        display: flex;
+
+    }
 
     .plm-text-content {
         padding-right: 0 !important;
